@@ -1,15 +1,16 @@
 
 import 'dart:io';
 
-class Student{
+class Student {
   String firstName;
   String lastName;
   int _password;
-  Student(this.firstName,this.lastName,this._password){
+
+  Student(this.firstName, this.lastName, this._password) {
     this.welcome_page();
   }
 
-  welcome_page(){
+  welcome_page() {
     print("""
       1 - login 
       2 - sign in
@@ -17,29 +18,30 @@ class Student{
       """);
 
     int user_input = 1;
-    if(user_input == 1){
+    if (user_input == 1) {
       this.login_page();
-    }else if(user_input == 2){
+    } else if (user_input == 2) {
       this.signin_page();
-    }else if(user_input == 3){
+    } else if (user_input == 3) {
       exit(0);
-    }else{
+    } else {
 
     }
   }
 
-  login_page(){}
-  signin_page(){}
+  login_page() {}
+
+  signin_page() {}
 
 
-
-  set_password(int oldPassword,int newPassword){
-    if(_password == oldPassword){
+  set_password(int oldPassword, int newPassword) {
+    if (_password == oldPassword) {
       _password = newPassword;
     }
   }
 
-  get_password(){
+  get_password() {
     return _password;
   }
+}
 

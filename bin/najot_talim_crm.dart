@@ -17,7 +17,7 @@ class Student {
       3 - exit
       """);
 
-    int user_input = 1;
+    int user_input = int.parse(stdin.readLineSync()!);
     if (user_input == 1) {
       this.login_page();
     } else if (user_input == 2) {

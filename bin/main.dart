@@ -1,9 +1,9 @@
 import 'dart:io';
 import 'najot_talim_crm.dart';
 
- String cfirstName="";
- String clastName="";
- String cpassword="";
+ String cfirstName="Mahmudxon";
+ String clastName="Abdumutalibov";
+ String cpassword="123456";
 
 welcome_page() {
   print("""

@@ -1,8 +1,10 @@
 import 'dart:io';
 
-import 'package:najot_talim_crm/functions/show_menu.dart';
+import 'package:najot_talim_crm/functions/clear_terminal.dart';
+import 'package:najot_talim_crm/functions/edit_profile.dart';
 import 'package:najot_talim_crm/functions/terminate_app.dart';
 import 'package:najot_talim_crm/najot_talim_crm.dart';
+import 'package:najot_talim_crm/functions/show_menu.dart';
 
 void showInfoScreen() {
   String? input = stdin.readLineSync();
@@ -16,7 +18,7 @@ void showInfoScreen() {
     if (parsedInput == null) {
       print("Szi yaroqsiz qiymat kiritingiz!");
     } else {
-      print(parsedInput);
+      clearTerminal();
       if (parsedInput <= 3 && parsedInput >= 1) {
         switch (parsedInput) {
           case 1:
@@ -24,6 +26,7 @@ void showInfoScreen() {
             stdin.readLineSync();
             break;
           case 2:
+            student = editProfile();
             break;
           case 3:
             student = null;

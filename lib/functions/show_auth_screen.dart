@@ -1,14 +1,15 @@
 import 'dart:io';
 
-import 'package:najot_talim_crm/functions/show_menu.dart';
+import 'package:najot_talim_crm/functions/clear_terminal.dart';
+import 'package:najot_talim_crm/functions/login.dart';
 import 'package:najot_talim_crm/functions/sign_up.dart';
 import 'package:najot_talim_crm/functions/terminate_app.dart';
-import 'package:najot_talim_crm/functions/validator.dart';
 import 'package:najot_talim_crm/najot_talim_crm.dart';
+import 'package:najot_talim_crm/functions/validator.dart';
+import 'package:najot_talim_crm/functions/show_menu.dart';
 
 void showAuthScreen() {
   String? input = stdin.readLineSync();
-
 
   if (input == null) {
     print("Siz hech qanday buyruq kiritmadingiz!");
@@ -19,7 +20,7 @@ void showAuthScreen() {
     if (parsedInput == null) {
       print("Siz yaroqsiz qiymat kiritingiz!");
     } else {
-      print(parsedInput);
+      clearTerminal();
       if (parsedInput <= 3 && parsedInput >= 1) {
         switch (parsedInput) {
           case 1:
@@ -38,13 +39,4 @@ void showAuthScreen() {
       }
     }
   }
-}
-
-void login() {
-  var id = validator("Id");
-  var password = validator("Parol");
-
-  var foundStudent = registeredStudents.firstWhere(
-      (element) => element.id == id && element.password == password);
-  student = foundStudent;
 }

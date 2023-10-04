@@ -1,14 +1,19 @@
-
-
-
-
 import 'package:najot_talim_crm/najot_talim_crm.dart';
 
 void listOfStudents() {
-  if (registeredStudents.isNotEmpty) {
-    for (student in registeredStudents) {
-      print(student); 
-    } 
+  print("kirvotti");
+  var students = repository.fetchStudents();
+  var teachers = teacherRepository.fetchTeachers();
+
+  if (students.isEmpty ) {
+    for (final student in students) {
+      print(student);
+    }
+   
+  } else if (teachers.isEmpty){
+      for (final teacher in teachers) {
+            print(teacher);
+          }
   } else {
     print("""
 

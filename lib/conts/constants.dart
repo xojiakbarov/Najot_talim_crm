@@ -1,16 +1,16 @@
 class AppConstans {
   static const signupText = """
+0. Dasturni toxtatish
 1.Ro'yxatdan o'tish
 2. Ilovaga kirish
 3. Royxatni ko'rish
-4. Dasturni toxtatish
 """;
 
   static const studentText = """
+0. Dasturni to'xtatish
 1. Ma'lumotni ko'rish
 2. Ma'lumotni taxrirlash
 3. Ilovadan chiqish
-4. Dasturni to'xtatish
 """;
 
   static const editProgileText = """

@@ -17,6 +17,6 @@ String validator(String type) {
       isTerminated = false;
     }
   } while (!isTerminated);
-
+  
   return input!;
 }

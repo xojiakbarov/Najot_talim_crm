@@ -8,9 +8,7 @@ void login() {
   var password = validator("Parol");
 
   try {
-    var foundStudent = registeredStudents.firstWhere(
-        (element) => element.id == id && element.password == password);
-    student = foundStudent;
+    student = repository.fetchStudent(id, password);
   } catch (arror) {
     print("Foydalanuvchi topilmadi");
     stdin.readLineSync();

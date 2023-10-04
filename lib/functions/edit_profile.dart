@@ -6,7 +6,7 @@ import 'package:najot_talim_crm/najot_talim_crm.dart';
 
 Student editProfile() {
   bool isTerminated = false;
-  final int index = registeredStudents.indexOf(student!);
+  final int index = repository.students.indexOf(student!);
   do {
     clearTerminal();
     print(AppConstans.editProgileText);
@@ -46,6 +46,6 @@ Student editProfile() {
     }
   } while (!isTerminated);
 
-  registeredStudents[index] = student!;
+  repository.students[index] = student!;
   return student!;
 }

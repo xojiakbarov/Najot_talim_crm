@@ -1,5 +1,5 @@
 import 'package:najot_talim_crm/functions/validator.dart';
-import 'package:najot_talim_crm/najot_talim_crm.dart';
+// import 'package:najot_talim_crm/najot_talim_crm.dart';
 
 bool selectGender() {
   late bool isMale;

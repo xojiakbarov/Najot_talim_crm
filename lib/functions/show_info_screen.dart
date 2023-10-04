@@ -18,8 +18,8 @@ void showInfoScreen() {
     if (parsedInput == null) {
       print("Szi yaroqsiz qiymat kiritingiz!");
     } else {
-      clearTerminal();
-      if (parsedInput <= 3 && parsedInput >= 1) {
+      // clearTerminal();
+      if (parsedInput <= 4 && parsedInput >= 1) {
         switch (parsedInput) {
           case 1:
             print(student);

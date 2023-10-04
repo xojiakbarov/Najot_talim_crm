@@ -21,7 +21,7 @@ void showAuthScreen() {
       print("Siz yaroqsiz qiymat kiritingiz!");
     } else {
       clearTerminal();
-      if (parsedInput <= 3 && parsedInput >= 1) {
+      if (parsedInput <= 4 && parsedInput >= 1) {
         switch (parsedInput) {
           case 1:
             student = signUp();
@@ -30,6 +30,10 @@ void showAuthScreen() {
             login();
             break;
           case 3:
+            print(student);
+            stdin.readLineSync();
+            break;
+          case 4:
             isTerminated = terminateApp();
             break;
           default:

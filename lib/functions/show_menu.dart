@@ -11,7 +11,7 @@ void showMenu() {
   while (!isTerminated) {
     // clearTerminal();
     // TODO: Printni o'chirib tashla  
-    print(student == null || teacher == null? AppConstans.signupText : AppConstans.mainManuText);
+    print(authenticatedUser == null? AppConstans.signupText : AppConstans.mainManuText);
     selectTask();
   }
 }

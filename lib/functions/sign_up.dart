@@ -2,6 +2,7 @@
 import 'package:najot_talim_crm/functions/sign_up_as_student.dart';
 import 'package:najot_talim_crm/functions/sign_up_as_teacher.dart';
 import 'package:najot_talim_crm/functions/validator.dart';
+import 'package:najot_talim_crm/najot_talim_crm.dart';
 // import 'package:najot_talim_crm/najot_talim_crm.dart';
 
 void signUp() {
@@ -24,10 +25,10 @@ void signUp() {
             isTerminated = true;
             break;
           case 1:
-            signUpAsTeacher();
+            authenticatedUser = signUpAsTeacher();
             break;
           case 2:
-            signUpAsStudent();
+            authenticatedUser = signUpAsStudent();
             break;
         }
       } else {

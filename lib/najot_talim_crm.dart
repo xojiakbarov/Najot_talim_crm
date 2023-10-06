@@ -1,4 +1,5 @@
 import 'package:najot_talim_crm/functions/show_menu.dart';
+import 'package:najot_talim_crm/models/authenticated_user.dart';
 import 'package:najot_talim_crm/models/students.dart';
 import 'package:najot_talim_crm/models/teacher.dart';
 import 'package:najot_talim_crm/repository/student.dart';
@@ -6,6 +7,7 @@ import 'package:najot_talim_crm/repository/teacher.dart';
 
 Student? student;
 Teacher? teacher;
+AuthenticatedUser? authenticatedUser;
 late StudentRepository repository;
 late TeacherRepository teacherRepository;
 bool isTerminated = false;

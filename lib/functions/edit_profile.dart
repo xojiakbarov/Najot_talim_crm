@@ -6,7 +6,7 @@ import 'package:najot_talim_crm/najot_talim_crm.dart';
 
 Student editProfile() {
   bool isTerminated = false;
-  final int index = repository.students.indexOf(student!);
+  final int index = repository.students.indexOf(authenticatedUser! as Student);
   do {
     clearTerminal();
     print(AppConstans.editProgileText);
@@ -22,23 +22,23 @@ Student editProfile() {
           break;
         case 1:
           final firstName = validator("Ism");
-          student = student!.copyWith(firstName: firstName);
+          authenticatedUser = (authenticatedUser! as Student).copyWith(firstName: firstName);
           break;
         case 2:
           final lastName = validator("Familiya");
-          student = student!.copyWith(lastName: lastName);
+          authenticatedUser = (authenticatedUser! as Student).copyWith(lastName: lastName);
           break;
         case 3:
           final password = validator("Parol");
-          student = student!.copyWith(password: password);
+          authenticatedUser = (authenticatedUser! as Student).copyWith(password: password);
           break;
         case 4:
           final email = validator("Email");
-          student = student!.copyWith(email: email);
+          authenticatedUser = (authenticatedUser! as Student).copyWith(email: email);
           break;
         case 5:
           final course = validator("Kurs");
-          student = student!.copyWith(course: course);
+          authenticatedUser = (authenticatedUser! as Student).copyWith(course: course);
           break;
       }
     } else {
@@ -46,6 +46,6 @@ Student editProfile() {
     }
   } while (!isTerminated);
 
-  repository.students[index] = student!;
-  return student!;
+  repository.students[index] = authenticatedUser! as Student;
+  return authenticatedUser as Student;
 }

@@ -1,9 +1,10 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 // import 'dart:convert';
 
+import 'package:najot_talim_crm/models/authenticated_user.dart';
 import 'package:najot_talim_crm/models/person.dart';
 
-class Teacher extends Person {
+class Teacher extends AuthenticatedUser {
   final String id;
   final String subject;
   final String password;

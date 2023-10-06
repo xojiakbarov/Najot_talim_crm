@@ -1,8 +1,9 @@
 // TODO 1: Talaba klasini yaratish
 
+import 'package:najot_talim_crm/models/authenticated_user.dart';
 import 'package:najot_talim_crm/models/person.dart';
 
-class Student extends Person {
+class Student extends AuthenticatedUser {
   final String id;
   final String password;
   final String? email;

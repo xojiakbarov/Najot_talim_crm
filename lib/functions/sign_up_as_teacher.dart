@@ -11,15 +11,15 @@ Teacher signUpAsTeacher() {
   var password = validator("Parol");
   isMale = selectGender();
   var subject = validator("Fan");
-  var salary = validator("Maosh");
+  
 
   return teacherRepository.createTeacher(
+    isMale: isMale,
     id: id,
+    salary:  0,
     firstName: firstName,
     lastName: lastName,
     password: password,
-    isMale: isMale,
-    salary: salary,
     subject: subject,
   );
 }

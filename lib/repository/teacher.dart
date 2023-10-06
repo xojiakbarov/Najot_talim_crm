@@ -13,7 +13,7 @@ abstract class TeacherRepository {
     required String password,
     required bool isMale,
     required String subject,
-    required String salary,
+    required int salary,
   });
 
   bool deleteTeacher(String id);
@@ -37,7 +37,7 @@ class TeacherRepositoryImpl implements TeacherRepository {
     required String password,
     required bool isMale,
     required String subject,
-    required String salary,
+    required int salary,
   }) {
     var newTeacher = Teacher(
       id: id,

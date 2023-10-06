@@ -8,7 +8,7 @@ class Teacher extends Person {
   final String subject;
   final String password;
   final String? email;
-  final String salary;
+  final int salary;
 
   Teacher({
     required String firstName,
@@ -30,7 +30,7 @@ class Teacher extends Person {
     String? subject,
     String? password,
     String? email,
-    String? salary,
+    int? salary,
     String? firstName,
     String? lastName,
     bool? isMale,

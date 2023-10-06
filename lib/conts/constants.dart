@@ -6,7 +6,7 @@ class AppConstans {
 3. Royxatni ko'rish
 """;
 
-  static const studentText = """
+  static const mainManuText = """
 0. Dasturni to'xtatish
 1. Ma'lumotni ko'rish
 2. Ma'lumotni taxrirlash

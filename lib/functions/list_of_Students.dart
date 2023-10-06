@@ -17,7 +17,7 @@ void listOfStudents() {
   } else {
     print("""
 
-Hali studentlar ro'yxatdan o'tmagan. Avval ro'yxatdan o'ting!
+Hali hech kim  ro'yxatdan o'tmagan. Avval ro'yxatdan o'ting!
 
 """);
   }
